@@ -1,0 +1,23 @@
+﻿<<declare $_confirmation = false>> 
+
+title: PickUpTreeRingTile
+tags: 
+---
+<<Narrate>>
+<<if $savePointEncountered>>
+It feels just like that strange tree you saw...  #line:081a7e6 
+<<else>>
+You sense an unfamiliar magic within it. #line:0e7df0b 
+<<endif>> 
+<<StopDiscovering>>
+===
+
+title: ConfirmTreeRingTile
+tags:
+---
+Return to the place you rested last?
+-> OK
+    <<set $_confirmation to true>>
+-> Cancel
+    <<set $_confirmation to false>>
+===
